@@ -20,7 +20,7 @@ public class TrackCoach implements Coach {
 		return "Neeraj "+fortuneService.getFortune();
 	}
 	public void doMyStartupStuff() {
-		System.out.println("Init method");
+		System.out.println("Init method New");
 	}
 	public void doMyStartupStuffYOYO() {
 		System.out.println("Destroyed method");
