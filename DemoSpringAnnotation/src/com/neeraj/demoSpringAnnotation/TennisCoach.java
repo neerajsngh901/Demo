@@ -6,10 +6,7 @@ import org.springframework.stereotype.Component;
 @Component("neeraj1")
 public class TennisCoach implements Coach {
 	private FortuneServices fortuneServices;
-	@Autowired
-	public void setFortuneServices(FortuneServices fortuneServices) {
-		this.fortuneServices = fortuneServices;
-	}
+	
 	@Override
 	public String getDailyWorkout() {
 		// TODO Auto-generated method stub
@@ -19,6 +16,10 @@ public class TennisCoach implements Coach {
 	public String getDailyFortune() {
 		// TODO Auto-generated method stub
 		return fortuneServices.getFortune();
+	}
+	@Autowired
+	public void doSome(FortuneServices fortuneServices) {
+		this.fortuneServices=fortuneServices;
 	}
 
 	

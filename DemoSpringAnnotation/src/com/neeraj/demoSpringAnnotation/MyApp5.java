@@ -10,6 +10,7 @@ public class MyApp5 {
 		Coach c=context.getBean("neeraj1",Coach.class);
 		System.out.println(c.getDailyWorkout());
 		System.out.println(c.getDailyFortune());
+		
 		context.close();
 	}
 
