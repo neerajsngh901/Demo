@@ -7,8 +7,8 @@ import org.springframework.stereotype.Component;
 public class TennisCoach implements Coach {
 	private FortuneServices fortuneServices;
 	@Autowired
-	public TennisCoach(FortuneServices fortuneServices) {
-		this.fortuneServices=fortuneServices;
+	public void setFortuneServices(FortuneServices fortuneServices) {
+		this.fortuneServices = fortuneServices;
 	}
 	@Override
 	public String getDailyWorkout() {
