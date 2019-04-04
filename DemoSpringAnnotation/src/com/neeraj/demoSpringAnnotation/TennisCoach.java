@@ -1,10 +1,13 @@
 package com.neeraj.demoSpringAnnotation;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
-@Component("neeraj1")
+@Component
 public class TennisCoach implements Coach {
+	@Autowired
+	@Qualifier("happyFortuneServices")
 	private FortuneServices fortuneServices;
 	
 	@Override
@@ -17,10 +20,7 @@ public class TennisCoach implements Coach {
 		// TODO Auto-generated method stub
 		return fortuneServices.getFortune();
 	}
-	@Autowired
-	public void doSome(FortuneServices fortuneServices) {
-		this.fortuneServices=fortuneServices;
-	}
+	
 
 	
 

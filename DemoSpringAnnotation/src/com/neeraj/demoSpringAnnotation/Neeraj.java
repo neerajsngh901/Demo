@@ -1,15 +1,16 @@
 package com.neeraj.demoSpringAnnotation;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Neeraj implements Coach {
-	private FortuneServices fortuneServices;
 	@Autowired
-	public Neeraj(FortuneServices fortuneServices) {
-		this.fortuneServices=fortuneServices;
-	}
+	@Qualifier("happyFortuneServices")
+	private FortuneServices fortuneServices;
+	//private FortuneServices fortuneServices;
+	
 	@Override
 	public String getDailyWorkout() {
 		// TODO Auto-generated method stub
